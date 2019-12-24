@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c6ad1d8-12f0-4d47-97e2-c6159442bacc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pages/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/css/app.css" afterPath="$PROJECT_DIR$/public/css/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/css/index.css" afterPath="$PROJECT_DIR$/public/css/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/min-css/index.min.css" afterPath="$PROJECT_DIR$/public/css/min-css/index.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/pages/index.html" afterPath="$PROJECT_DIR$/public/pages/index.html" />
     </list>
     <ignored path="linhua-js.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,19 +70,19 @@
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/pages/index.html">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="83" column="50" selection-start-line="83" selection-start-column="50" selection-end-line="83" selection-end-column="50" />
+            <state relative-caret-position="180">
+              <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#684#692#1" expanded="true" />
-                <element signature="e#18568#18576#1" expanded="true" />
-                <element signature="e#18778#18786#1" expanded="true" />
-                <element signature="e#19028#19036#1" expanded="true" />
-                <element signature="e#20029#20037#1" expanded="true" />
-                <marker date="1577170840531" expanded="false" signature="20939:22328" ph="[...]" />
+                <element signature="e#630#638#1" expanded="true" />
+                <element signature="e#1186#1194#1" expanded="true" />
+                <element signature="e#1396#1404#1" expanded="true" />
+                <element signature="e#1646#1654#1" expanded="true" />
+                <element signature="e#2646#2654#1" expanded="true" />
+                <marker date="1577171511735" expanded="false" signature="3556:4945" ph="[...]" />
               </folding>
             </state>
           </provider>
@@ -140,6 +138,7 @@
         <option value="$PROJECT_DIR$/public/css/css/app.css" />
         <option value="$PROJECT_DIR$/public/css/css/index.css" />
         <option value="$PROJECT_DIR$/public/pages/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -212,60 +211,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newLinhuaJs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newLinhuaJs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newLinhuaJs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newLinhuaJs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newLinhuaJs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newLinhuaJs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -362,6 +307,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\project\newLinhuaJs" />
       <recent name="D:\project\newLinhuaJs\public\css\css" />
       <recent name="D:\project\newLinhuaJs\public" />
     </key>
@@ -441,7 +387,7 @@
       <option name="presentableId" value="Default" />
       <updated>1577085446915</updated>
       <workItem from="1577085448591" duration="7698000" />
-      <workItem from="1577147980443" duration="18316000" />
+      <workItem from="1577147980443" duration="18988000" />
     </task>
     <task id="LOCAL-00001" summary="记录">
       <created>1577149069256</created>
@@ -471,11 +417,18 @@
       <option name="project" value="LOCAL" />
       <updated>1577166502898</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="静态初步完成，接下来是点击事件，最后是适配手机端">
+      <created>1577170870552</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1577170870552</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26014000" />
+    <option name="totallyTimeSpent" value="26686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -554,19 +507,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/pages/index.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#684#692#1" expanded="true" />
-            <element signature="e#18568#18576#1" expanded="true" />
-            <element signature="e#18778#18786#1" expanded="true" />
-            <element signature="e#19028#19036#1" expanded="true" />
-            <element signature="e#20029#20037#1" expanded="true" />
-            <marker date="1577170840531" expanded="false" signature="20939:22328" ph="[...]" />
+            <element signature="e#630#638#1" expanded="true" />
+            <element signature="e#1186#1194#1" expanded="true" />
+            <element signature="e#1396#1404#1" expanded="true" />
+            <element signature="e#1646#1654#1" expanded="true" />
+            <element signature="e#2646#2654#1" expanded="true" />
+            <marker date="1577171511735" expanded="false" signature="3556:4945" ph="[...]" />
           </folding>
         </state>
       </provider>
@@ -707,19 +660,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/pages/index.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="83" column="50" selection-start-line="83" selection-start-column="50" selection-end-line="83" selection-end-column="50" />
+        <state relative-caret-position="180">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#684#692#1" expanded="true" />
-            <element signature="e#18568#18576#1" expanded="true" />
-            <element signature="e#18778#18786#1" expanded="true" />
-            <element signature="e#19028#19036#1" expanded="true" />
-            <element signature="e#20029#20037#1" expanded="true" />
-            <marker date="1577170840531" expanded="false" signature="20939:22328" ph="[...]" />
+            <element signature="e#630#638#1" expanded="true" />
+            <element signature="e#1186#1194#1" expanded="true" />
+            <element signature="e#1396#1404#1" expanded="true" />
+            <element signature="e#1646#1654#1" expanded="true" />
+            <element signature="e#2646#2654#1" expanded="true" />
+            <marker date="1577171511735" expanded="false" signature="3556:4945" ph="[...]" />
           </folding>
         </state>
       </provider>
