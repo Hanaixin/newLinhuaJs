@@ -15,7 +15,10 @@ body,html{
 .hide{
     display: none;
 }
-
+/*鼠标小手*/
+.c-p{
+    cursor: pointer;
+}
 /*全局flex布局样式*/
 .flex {
     display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */

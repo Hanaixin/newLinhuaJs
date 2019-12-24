@@ -17,6 +17,7 @@
     left: 0;
     padding-top: 59px;
     margin-top: -1px;
+    margin-left: 0;
     box-sizing: border-box;
     z-index: 2;
 }
@@ -84,4 +85,68 @@
 .el-menu--horizontal.el-menu--dark .el-submenu .el-menu-item:hover,.el-menu-item.is-active, .el-menu--horizontal.el-menu--dark .el-submenu .el-submenu-title:hover, .el-menu-item:hover,.el-submenu .el-menu-item:hover, .el-submenu__title:hover{
     background-color: #20a0ff !important;
     color: #fff;
+}
+/*响应式*/
+.show-anyway{
+    animation: toRight 0.5s !important;
+    animation-fill-mode : forwards !important;
+}
+/*定义动画*/
+@keyframes toLeft{
+    from {margin-left: 0;}
+    to {margin-left: -200px;}
+}
+@keyframes toRight{
+    from {margin-left: -200px;}
+    to {margin-left: 0;}
+}
+/*大型屏幕pc 超大屏*/
+@media screen and (min-width:1200px){
+    .left{
+        animation: toRight 0.5s;
+        animation-fill-mode : forwards;
+    }
+    .top{
+        /*height: 59px;*/
+    }
+}
+/*1200>=pc>=992 大屏，字体红色，背景黑色*/
+@media screen and (min-width:992px) and (max-width: 1199px){
+    .left{
+        animation: toRight 0.5s;
+        animation-fill-mode : forwards;
+    }
+    .top{
+        /*height: 59px;*/
+    }
+}
+/*768<=pad<992 中屏，字体黄色，背景红色*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .left{
+        animation: toLeft 1s;
+        animation-fill-mode : forwards;
+    }
+    .top{
+        /*height: 98px;*/
+    }
+}
+/*phone<768  小屏，字体黑色，背景蓝色*/
+@media screen and (max-width: 767px) and (min-width: 480px){
+    .left{
+        animation: toLeft 1s;
+        animation-fill-mode : forwards;
+    }
+    .top{
+        /*height: 98px;*/
+    }
+}
+/* 超小屏，字体黑色，背景蓝色*/
+@media screen and (max-width: 480px){
+    .left{
+        animation: toLeft 1s;
+        animation-fill-mode : forwards;
+    }
+    .top{
+        /*height: 98px;*/
+    }
 }
