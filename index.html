@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>金旺临化数据云平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="public/html/head.html" rel="import"/>
     <link rel="stylesheet" href="public/lib/iconfont/iconfont.css">
     <link rel="stylesheet" href="public/css/min-css/index.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <div id="app">
@@ -47,14 +46,13 @@
         <el-row class="tac nav bg_nav">
             <el-col :span="24">
                 <el-menu
-                        default-active="1"
+                        default-active="index"
                         background-color="#545c64"
                         text-color="#fff"
                         class="el-menu-vertical-demo"
                         active-text-color="#ffd04b"
-                        @open="handleOpen"
-                        @close="handleClose">
-                    <el-menu-item index="1">
+                        @select="handleSelect">
+                    <el-menu-item index="index">
                         <i class="el-icon-document"></i>
                         <span slot="title">主页</span>
                     </el-menu-item>
@@ -78,7 +76,9 @@
         </el-row>
     </div>
     <!--content-->
-    <div class="content page" @click="_snn"></div>
+    <div class="content page" @click="_snn">
+        <iframe :src="'public/pages/' + src + '.html'"></iframe>
+    </div>
 </div>
 <script>
     var app = new Vue({
@@ -128,7 +128,8 @@
 //            左侧导航栏
             sn: false,
             //个人设置
-            settingOpen: false
+            settingOpen: false,
+            src: 'index'
         },
         methods: {
 //            手动显示左侧导航栏
@@ -143,11 +144,9 @@
             _ot(){
                 this.settingOpen = !this.settingOpen;
             },
-            handleOpen(key, keyPath) {
+            handleSelect(key, keyPath){
                 console.log(key, keyPath);
-            },
-            handleClose(key, keyPath) {
-                console.log(key, keyPath);
+                this.src = key;
             }
         }
     })

@@ -1,4 +1,4 @@
-.top{
+.top {
     width: 100%;
     height: 59px;
     border-bottom: 1px solid #eee;
@@ -8,7 +8,8 @@
     box-sizing: border-box;
     z-index: 3;
 }
-.left{
+
+.left {
     border-right: 1px solid #eee;
     width: 200px;
     height: 100%;
@@ -21,20 +22,22 @@
     box-sizing: border-box;
     z-index: 2;
 }
-.head-normal{
+
+.head-normal {
     position: relative;
     cursor: pointer;
 }
-.head-normal img{
+
+.head-normal img {
     width: 48px;
     height: 48px;
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    border-radius:50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
 }
 
-.head-setting{
-    font-size:0.8rem;
+.head-setting {
+    font-size: 0.8rem;
     position: absolute;
     padding: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.176) !important;
@@ -43,7 +46,8 @@
     top: 150%;
     color: #666;
 }
-.head-setting::after{
+
+.head-setting::after {
     content: '';
     width: 0;
     height: 0;
@@ -54,13 +58,13 @@
     border: 10px solid transparent;
     border-bottom: 10px solid #ffffff;
 }
-.head-setting>div{
+
+.head-setting > div {
     padding: .5rem 0;
 }
 
-
 /*content*/
-.content{
+.content {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -72,81 +76,142 @@
     box-sizing: border-box;
     overflow: auto;
 }
-.page{
+
+.page {
     background-color: #f1f2f7;
 }
 
-.el-menu{
+.el-menu {
     background-color: transparent !important;
 }
-.el-menu-item, .el-submenu__title{
+
+.el-menu-item, .el-submenu__title {
     color: #b8c7ce;
 }
-.el-menu--horizontal.el-menu--dark .el-submenu .el-menu-item:hover,.el-menu-item.is-active, .el-menu--horizontal.el-menu--dark .el-submenu .el-submenu-title:hover, .el-menu-item:hover,.el-submenu .el-menu-item:hover, .el-submenu__title:hover{
+
+.el-menu--horizontal.el-menu--dark .el-submenu .el-menu-item:hover, .el-menu-item.is-active, .el-menu--horizontal.el-menu--dark .el-submenu .el-submenu-title:hover, .el-menu-item:hover, .el-submenu .el-menu-item:hover, .el-submenu__title:hover {
     background-color: #20a0ff !important;
     color: #fff;
 }
+
+iframe {
+    width: 99%;
+    height: 99%;
+    border: 1px solid transparent;
+}
+
 /*响应式*/
-.show-anyway{
+.show-anyway {
     animation: toRight 0.5s !important;
-    animation-fill-mode : forwards !important;
+    animation-fill-mode: forwards !important;
 }
+
+.preload {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
 /*定义动画*/
-@keyframes toLeft{
-    from {margin-left: 0;}
-    to {margin-left: -200px;}
+@keyframes toLeft {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: -200px;
+    }
 }
-@keyframes toRight{
-    from {margin-left: -200px;}
-    to {margin-left: 0;}
+
+@keyframes toRight {
+    from {
+        margin-left: -200px;
+    }
+    to {
+        margin-left: 0;
+    }
 }
+
+@keyframes pdLeft {
+    from {
+        padding-left: 200px;
+    }
+    to {
+        padding-left: 0;
+    }
+}
+
+@keyframes pdRight {
+    from {
+        padding-left: 0;
+    }
+    to {
+        padding-left: 200px;
+    }
+}
+
 /*大型屏幕pc 超大屏*/
-@media screen and (min-width:1200px){
-    .left{
-        animation: toRight 0.5s;
-        animation-fill-mode : forwards;
+@media screen and (min-width: 1200px) {
+    .left {
+        animation: toRight 0.1s;
+        animation-fill-mode: forwards;
     }
-    .top{
-        /*height: 59px;*/
+
+    .content {
+        animation: pdRight 0.1s;
+        animation-fill-mode: forwards;
     }
 }
+
 /*1200>=pc>=992 大屏，字体红色，背景黑色*/
-@media screen and (min-width:992px) and (max-width: 1199px){
-    .left{
-        animation: toRight 0.5s;
-        animation-fill-mode : forwards;
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .left {
+        animation: toRight 0.1s;
+        animation-fill-mode: forwards;
     }
-    .top{
-        /*height: 59px;*/
+
+    .content {
+        animation: pdRight 0.1s;
+        animation-fill-mode: forwards;
     }
 }
+
 /*768<=pad<992 中屏，字体黄色，背景红色*/
 @media screen and (min-width: 768px) and (max-width: 991px) {
-    .left{
-        animation: toLeft 1s;
-        animation-fill-mode : forwards;
+    .left {
+        animation: toLeft 0.1s;
+        animation-fill-mode: forwards;
     }
-    .top{
-        /*height: 98px;*/
+
+    .content {
+        animation: pdLeft 0.1s;
+        animation-fill-mode: forwards;
     }
 }
+
 /*phone<768  小屏，字体黑色，背景蓝色*/
-@media screen and (max-width: 767px) and (min-width: 480px){
-    .left{
-        animation: toLeft 1s;
-        animation-fill-mode : forwards;
+@media screen and (max-width: 767px) and (min-width: 480px) {
+    .left {
+        animation: toLeft 0.1s;
+        animation-fill-mode: forwards;
     }
-    .top{
-        /*height: 98px;*/
+
+    .content {
+        animation: pdLeft 0.1s;
+        animation-fill-mode: forwards;
     }
 }
+
 /* 超小屏，字体黑色，背景蓝色*/
-@media screen and (max-width: 480px){
-    .left{
-        animation: toLeft 1s;
-        animation-fill-mode : forwards;
+@media screen and (max-width: 480px) {
+    .left {
+        animation: toLeft 0.1s;
+        animation-fill-mode: forwards;
     }
-    .top{
-        /*height: 98px;*/
+
+    .content {
+        animation: pdLeft 0.1s;
+        animation-fill-mode: forwards;
     }
 }
