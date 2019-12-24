@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../html/head.html" rel="import" />
+</head>
+<body>
+<div class="whole">
+    <!-- top -->
+    <div class="top"></div>
+    <!-- left -->
+    <div class="left">
+        <ul class="nav">
+            <li v-for="(item,index) in nav" :key="item.title">
+                <div class="flex flex_j_b flex_a_c" :class="{bg_color:item.open,font_fff:item.open}" nth="1" @click="changeTab(1,index)">
+                    {{item.title}}
+                    <i v-if="item.list && !item.open" class="el-icon-arrow-down"></i>
+                    <i v-if="item.list && item.open" class="el-icon-arrow-up"></i>
+                </div>
+                <ul class="nav" v-if="item.list && item.open">
+                    <li v-for="(itm,idx) in item.list" :key="itm.title">
+                        <div class="flex flex_j_b flex_a_c libox" nth="2" @click="changeTab(2,index,idx)">
+                            {{itm.title}}
+                            <i v-if="itm.list && !itm.open" class="el-icon-arrow-down"></i>
+                            <i v-if="itm.list && itm.open" class="el-icon-arrow-up"></i>
+                        </div>
+                        <ul class="nav" v-if="itm.list && itm.open">
+                            <li v-for="(its,ix) in itm.list" :key="its.title">
+                                <div
+                                        class="flex flex_j_b flex_a_c libox"
+                                        nth="2"
+                                        @click="changeTab(3,index,idx,ix)"
+                                >{{its.title}}</div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
