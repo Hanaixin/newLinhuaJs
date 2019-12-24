@@ -12,7 +12,9 @@ body,html{margin:0;padding:0;width:100%;height:100%;overflow:auto;position:relat
 .flex_j_a{-webkit-justify-content:space-around;justify-content:space-around}
 .flex_j_e{-webkit-box-pack:end;-ms-flex-pack:end;-webkit-justify-content:flex-end;justify-content:flex-end}
 .flex_w_w{flex-wrap:wrap}
-.bg_color{background-color:#ff6c60}
+.bg_color{background-color:#20a0ff}
+.bg_trans{background:#20a0ff0f}
+.bg_nav{background-color:#2a3542}
 .bg_fff{background-color:#fff}
-.font_color{color:#ff6c60}
+.font_color{color:#20a0ff}
 .font_fff{color:#fff}

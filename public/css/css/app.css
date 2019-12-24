@@ -96,14 +96,21 @@ body,html{
 /*全局flex布局样式 end*/
 /* 系统颜色 */
 .bg_color{
-    background-color: #ff6c60;
+    background-color: #20a0ff;
+}
+.bg_trans{
+    background: #20a0ff0f;
+}
+.bg_nav{
+    /*background-color: #2a3542;*/
+    background-color: #001529;
 }
 .bg_fff{
     background-color: #fff;
 }
 
 .font_color{
-    color: #ff6c60;
+    color: #20a0ff;
 }
 .font_fff{
     color: #fff;
