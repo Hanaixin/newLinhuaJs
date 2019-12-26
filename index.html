@@ -34,7 +34,7 @@
                             <span>公司通讯录</span>
                         </div>
                     </div>
-                    <div class="bg_trans font_color flex flex_d_c flex_a_c">
+                    <div class="bg_trans font_color flex flex_d_c flex_a_c" @click="exit">
                         <span class="icon iconfont">&#xe748;</span>
                         <span>退出登录</span>
                     </div>
@@ -48,7 +48,7 @@
         <el-row class="tac nav bg_nav">
             <el-col :span="24">
                 <el-menu
-                        default-active=""
+                        :default-active="navIndex"
                         background-color="#545c64"
                         text-color="#fff"
                         class="el-menu-vertical-demo"
@@ -152,7 +152,7 @@
                     ]
                 }
             ],
-            navIndex: '',//默认选中的值
+            navIndex: '主菜单',//默认选中的值
 //            左侧导航栏
             sn: false,
             //个人设置
@@ -172,16 +172,16 @@
                         title = tab.title;
                     }
                 });
-                $(document).find('.el-menu-item').each(function(){
+                $(document).find('.el-menu-item').each(function () {
                     $(this).removeClass('is-active');
-                    console.log(this.innerText,title,this.innerText == title);
+                    console.log(this.innerText, title, this.innerText == title);
                     var text = this.innerText;
 //                    var re =  [\u4E00-\u9FA5\\s];
 //                    text = re.test(text);
-                    if(this.innerText == title){
-                        if($(this).hasClass('is-active')){
+                    if (this.innerText == title) {
+                        if ($(this).hasClass('is-active')) {
 
-                        }else{
+                        } else {
                             $(this).addClass('is-active');
                         }
                     }
@@ -192,8 +192,32 @@
             if (!localStorage.getItem('token')) {
                 location.href = './login.html';
             }
+            this.addTab('主菜单');
+            window: onresize = function () {
+                console.log('resize');
+                console.log($('.el-tabs--card').height());
+                console.log($('.el-tabs__nav-scroll').height());
+                $('.el-tabs__content').height($('.el-tabs--card').height()-$('.el-tabs__nav-scroll').height());
+            }
         },
         methods: {
+//            推出登录
+            exit(){
+                this.$confirm('此操作将退出登录, 是否继续?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    localStorage.removeItem('token');
+                    location.href = './login.html';
+                }).catch(() => {
+//                    this.$message({
+//                        type: 'info',
+//                        message: '已取消删除'
+//                    });
+                });
+
+            },
 //            手动显示左侧导航栏
             _snn(){
                 this.sn = false;
@@ -230,7 +254,7 @@
                 this.editableTabs.push({
                     title: targetName,
                     name: newTabName,
-                    content: el.$attrs.src
+                    content: (el && el.$attrs.src) ? el.$attrs.src : '/newLinhuaJs/public/pages/component/component'
                 });
                 this.editableTabsValue = newTabName;
             },
@@ -251,6 +275,9 @@
                 this.editableTabsValue = activeName;
                 this.editableTabs = tabs.filter(tab => tab.name !== targetName);
                 console.log('删除过后的选项卡数组：', this.editableTabs)
+                if(this.editableTabs.length<1){
+                    this.addTab('主菜单');
+                }
             }
         }
     })
