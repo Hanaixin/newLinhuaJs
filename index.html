@@ -7,6 +7,7 @@
     <link rel="icon" href="public/img/linhua_logo.png"/>
     <link rel="stylesheet" href="public/lib/iconfont/iconfont.css">
     <link rel="stylesheet" href="public/css/min-css/index.min.css">
+    <script src="public/js/page_url.js"></script>
 </head>
 <body>
 <div id="app">
@@ -47,7 +48,7 @@
         <el-row class="tac nav bg_nav">
             <el-col :span="24">
                 <el-menu
-                        default-active="index"
+                        default-active=""
                         background-color="#545c64"
                         text-color="#fff"
                         class="el-menu-vertical-demo"
@@ -56,7 +57,7 @@
                     <template v-for="(item,index) in nav">
                         <!--第一层-->
                         <template v-if="item.list">
-                            <el-submenu :index="item">
+                            <el-submenu :index="item.title"  :src="item.src">
                                 <template slot="title">
                                     <span class="iconfont">&#xe718;</span>
                                     <span>{{item.title}}</span>
@@ -64,17 +65,17 @@
                                 <template v-for="(itm,idx) in item.list">
                                     <!--第二层-->
                                     <template v-if="itm.list">
-                                        <el-submenu :index="itm">
+                                        <el-submenu :index="itm.title" :src="itm.src">
                                             <template slot="title">{{itm.title}}</template>
                                             <template v-for="(its,idxs) in itm.list">
-                                                <el-menu-item :index="its.src">{{its.title}}</el-menu-item>
+                                                <el-menu-item :index="its.title" :src="its.src">{{its.title}}</el-menu-item>
                                             </template>
                                         </el-submenu>
                                     </template>
                                     <template v-else>
                                         <el-menu-item-group>
                                             <!--<span class="iconfont">&#xe718;</span>-->
-                                            <el-menu-item :index="itm.src">{{itm.title}}</el-menu-item>
+                                            <el-menu-item :index="itm.title" :src="itm.src">{{itm.title}}</el-menu-item>
                                         </el-menu-item-group>
                                     </template>
                                 </template>
@@ -82,40 +83,29 @@
                         </template>
                         <!--第一层-->
                         <template v-else>
-                            <el-menu-item :index="item.src">
+                            <el-menu-item :index="item.title" :src="item.src">
                                 <span class="iconfont">&#xe718;</span>
                                 <span slot="title">{{item.title}}</span>
                             </el-menu-item>
                         </template>
                     </template>
-                    <!--************************************************-->
-                    <el-menu-item index="index">
-                        <i class="el-icon-document"></i>
-                        <span slot="title">主页</span>
-                    </el-menu-item>
-                    <el-submenu index="2">
-                        <template slot="title">
-                            <span class="iconfont">&#xe718;</span>
-                            <span>导航一</span>
-                        </template>
-                        <el-menu-item-group>
-                            <el-menu-item index="2-1">选项1</el-menu-item>
-                            <el-menu-item index="2-2">选项2</el-menu-item>
-                            <el-menu-item index="2-3">选项3</el-menu-item>
-                        </el-menu-item-group>
-                        <el-submenu index="2-4">
-                            <template slot="title">选项4</template>
-                            <el-menu-item index="1-4-1">选项1</el-menu-item>
-                        </el-submenu>
-                    </el-submenu>
                 </el-menu>
             </el-col>
         </el-row>
     </div>
     <!--content-->
     <div class="content page">
-        <iframe :src="'public/pages/' + src + '.html'"></iframe>
-        <div class="iframe-mask" @click="_snn"></div>
+        <el-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
+            <el-tab-pane
+                    v-for="(item, index) in editableTabs"
+                    :key="item.name"
+                    :label="item.title"
+                    :name="item.name"
+            >
+                <!--{{item.content}}-->
+                <iframe :src="item.content + '.html'"></iframe>
+            </el-tab-pane>
+        </el-tabs>
     </div>
 </div>
 <script>
@@ -125,50 +115,46 @@
             nav: [
                 {
                     title: "主菜单",
-                    src: 'main'
+                    src: 'index'
                 },
                 {
                     title: "组织架构",
-                    src: '',
                     list: [
                         {
                             title: "部门管理",
-                            src: '',
                             list: [
                                 {
                                     title: "部门列表",
-                                    src: 'department'
+                                    src: department_list
                                 },
                                 {
                                     title: "添加部门",
-                                    src: 'addDepartment'
+                                    src: department_list
                                 }
                             ]
                         },
                         {
                             title: "职位管理",
-                            src: '',
                             list: [
                                 {
                                     title: "职位列表",
-                                    src: 'position'
+                                    src: department_list
                                 },{
                                     title: '添加职位',
-                                    src: 'addPosition'
+                                    src: department_list
                                 }
                             ]
                         },
                         {
                             title: "员工管理",
-                            src: '',
                             list: [
                                 {
                                     title: '员工列表',
-                                    src: 'staff'
+                                    src: department_list
                                 },
                                 {
                                     title: '添加员工',
-                                    src: 'addStaff'
+                                    src: department_list
                                 }
                             ]
                         }
@@ -179,7 +165,11 @@
             sn: false,
             //个人设置
             settingOpen: false,
-            src: 'index'
+            src: 'index',
+            editableTabsValue: '2',
+            editableTabs: [],
+            tabIndex: 2,
+            basePath: basePath
         },
         created(){
             if(!localStorage.getItem('token')){
@@ -199,9 +189,49 @@
             _ot(){
                 this.settingOpen = !this.settingOpen;
             },
-            handleSelect(key, keyPath){
-                console.log(key, keyPath);
+            handleSelect(key, keyPath,c){
                 this.src = key;
+                var th = this;
+                let goon = true;
+                let tabs = th.editableTabs;
+                tabs.forEach((tab, index) => {
+                    if(tab.title == key){
+                        goon = false;
+                        th.tabIndex = tab.name;
+                    }
+                });
+                if(goon){
+                    th.addTab(key,c);
+                }else{
+                    //选中
+                    this.editableTabsValue = th.tabIndex;
+                    console.log(tabs);
+                }
+            },
+            addTab(targetName,el) {
+                let newTabName = ++this.tabIndex + '';
+                this.editableTabs.push({
+                    title: targetName,
+                    name: newTabName,
+                    content: el.$attrs.src
+                });
+                this.editableTabsValue = newTabName;
+            },
+            removeTab(targetName) {
+                let tabs = this.editableTabs;
+                let activeName = this.editableTabsValue;
+                if (activeName === targetName) {
+                    tabs.forEach((tab, index) => {
+                        if (tab.name === targetName) {
+                            let nextTab = tabs[index + 1] || tabs[index - 1];
+                            if (nextTab) {
+                                activeName = nextTab.name;
+                            }
+                        }
+                    });
+                }
+                this.editableTabsValue = activeName;
+                this.editableTabs = tabs.filter(tab => tab.name !== targetName);
             }
         }
     })
