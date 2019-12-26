@@ -1,4 +1,4 @@
-.top{width:100%;height:59px;border-bottom:1px solid #eee;position:absolute;top:0;padding:0 1rem;box-sizing:border-box;z-index:3}
+.top{width:100%;height:59px;position:absolute;top:0;padding:0 1rem;box-sizing:border-box;z-index:3}
 .left{border-right:1px solid #eee;width:200px;height:100%;position:absolute;top:0;left:0;padding-top:59px;margin-top:-1px;margin-left:0;box-sizing:border-box;z-index:2}
 .head-normal{position:relative;cursor:pointer}
 .head-normal img{width:48px;height:48px;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%}
@@ -10,6 +10,13 @@
 .el-menu{background-color:transparent!important}
 .el-menu-item,.el-submenu__title{color:#b8c7ce}
 .el-menu--horizontal.el-menu--dark .el-submenu .el-menu-item:hover,.el-menu--horizontal.el-menu--dark .el-submenu .el-submenu-title:hover,.el-menu-item.is-active,.el-menu-item:hover,.el-submenu .el-menu-item:hover,.el-submenu__title:hover{background-color:#20a0ff!important;color:#fff}
+.el-tabs__header{background-color:#fff;margin:0}
+.el-tabs--card>.el-tabs__header .el-tabs__item.is-active{border-color:transparent;border-top:1px solid #20a0ff;border-radius:0;background-color:#f6f6f6}
+.el-tab-pane,.el-tabs--card,.el-tabs__content{width:100%}
+.el-tab-pane,.el-tabs--card{height:100%}
+.el-tabs__content{height:95%}
+.el-form{width:460px}
+.box{margin:.5rem;padding:1rem}
 .iframe-mask{position:absolute;top:0;left:0;width:100%;height:100%;background-color:transparent}
 iframe{width:99%;height:99%;border:1px solid transparent}
 .show-anyway{animation:toRight .5s!important;animation-fill-mode:forwards!important}

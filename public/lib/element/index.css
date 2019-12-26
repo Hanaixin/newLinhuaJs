@@ -1685,7 +1685,7 @@
 .el-table th {
 	white-space: nowrap;
 	overflow: hidden;
-	background-color: #eef1f6;
+	background-color: #ffffff;
 	text-align: left
 }
 
@@ -1982,7 +1982,7 @@
 
 .el-table__footer-wrapper thead div,
 .el-table__header-wrapper thead div {
-	background-color: #eef1f6;
+	background-color: #ffffff;
 	color: #1f2d3d
 }
 

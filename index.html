@@ -57,7 +57,7 @@
                     <template v-for="(item,index) in nav">
                         <!--第一层-->
                         <template v-if="item.list">
-                            <el-submenu :index="item.title"  :src="item.src">
+                            <el-submenu :index="item.title" :src="item.src">
                                 <template slot="title">
                                     <span class="iconfont">&#xe718;</span>
                                     <span>{{item.title}}</span>
@@ -68,7 +68,8 @@
                                         <el-submenu :index="itm.title" :src="itm.src">
                                             <template slot="title">{{itm.title}}</template>
                                             <template v-for="(its,idxs) in itm.list">
-                                                <el-menu-item :index="its.title" :src="its.src">{{its.title}}</el-menu-item>
+                                                <el-menu-item :index="its.title" :src="its.src">{{its.title}}
+                                                </el-menu-item>
                                             </template>
                                         </el-submenu>
                                     </template>
@@ -84,7 +85,7 @@
                         <!--第一层-->
                         <template v-else>
                             <el-menu-item :index="item.title" :src="item.src">
-                                <span class="iconfont">&#xe718;</span>
+                                <!--<span class="iconfont">&#xe718;</span>-->
                                 <span slot="title">{{item.title}}</span>
                             </el-menu-item>
                         </template>
@@ -95,13 +96,12 @@
     </div>
     <!--content-->
     <div class="content page">
-        <el-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
+        <el-tabs class="" v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
             <el-tab-pane
                     v-for="(item, index) in editableTabs"
                     :key="item.name"
                     :label="item.title"
-                    :name="item.name"
-            >
+                    :name="item.name">
                 <!--{{item.content}}-->
                 <iframe :src="item.content + '.html'"></iframe>
             </el-tab-pane>
@@ -115,7 +115,7 @@
             nav: [
                 {
                     title: "主菜单",
-                    src: 'index'
+                    src: component
                 },
                 {
                     title: "组织架构",
@@ -129,7 +129,7 @@
                                 },
                                 {
                                     title: "添加部门",
-                                    src: department_list
+                                    src: add_department
                                 }
                             ]
                         },
@@ -139,7 +139,7 @@
                                 {
                                     title: "职位列表",
                                     src: department_list
-                                },{
+                                }, {
                                     title: '添加职位',
                                     src: department_list
                                 }
@@ -147,32 +147,49 @@
                         },
                         {
                             title: "员工管理",
-                            list: [
-                                {
-                                    title: '员工列表',
-                                    src: department_list
-                                },
-                                {
-                                    title: '添加员工',
-                                    src: department_list
-                                }
-                            ]
+                            src: department_list
                         }
                     ]
                 }
             ],
+            navIndex: '',//默认选中的值
 //            左侧导航栏
             sn: false,
             //个人设置
             settingOpen: false,
             src: 'index',
-            editableTabsValue: '2',
+            editableTabsValue: '0',
             editableTabs: [],
-            tabIndex: 2,
+            tabIndex: 0,
             basePath: basePath
         },
+        watch: {
+            'editableTabsValue': function (val) {
+                console.log('选项卡变化editableTabsValue:', val);
+                let tabs = this.editableTabs, title;
+                tabs.forEach((tab, index) => {
+                    if (tab.name === val) {
+                        title = tab.title;
+                    }
+                });
+                $(document).find('.el-menu-item').each(function(){
+                    $(this).removeClass('is-active');
+                    console.log(this.innerText,title,this.innerText == title);
+                    var text = this.innerText;
+//                    var re =  [\u4E00-\u9FA5\\s];
+//                    text = re.test(text);
+                    if(this.innerText == title){
+                        if($(this).hasClass('is-active')){
+
+                        }else{
+                            $(this).addClass('is-active');
+                        }
+                    }
+                })
+            },
+        },
         created(){
-            if(!localStorage.getItem('token')){
+            if (!localStorage.getItem('token')) {
                 location.href = './login.html';
             }
         },
@@ -189,26 +206,26 @@
             _ot(){
                 this.settingOpen = !this.settingOpen;
             },
-            handleSelect(key, keyPath,c){
+            handleSelect(key, keyPath, c){
                 this.src = key;
                 var th = this;
                 let goon = true;
                 let tabs = th.editableTabs;
                 tabs.forEach((tab, index) => {
-                    if(tab.title == key){
+                    if (tab.title == key) {
                         goon = false;
                         th.tabIndex = tab.name;
                     }
                 });
-                if(goon){
-                    th.addTab(key,c);
-                }else{
+                if (goon) {
+                    th.addTab(key, c);
+                } else {
                     //选中
                     this.editableTabsValue = th.tabIndex;
                     console.log(tabs);
                 }
             },
-            addTab(targetName,el) {
+            addTab(targetName, el) {
                 let newTabName = ++this.tabIndex + '';
                 this.editableTabs.push({
                     title: targetName,
@@ -218,6 +235,7 @@
                 this.editableTabsValue = newTabName;
             },
             removeTab(targetName) {
+                console.log('删除前的入参：', targetName)
                 let tabs = this.editableTabs;
                 let activeName = this.editableTabsValue;
                 if (activeName === targetName) {
@@ -232,6 +250,7 @@
                 }
                 this.editableTabsValue = activeName;
                 this.editableTabs = tabs.filter(tab => tab.name !== targetName);
+                console.log('删除过后的选项卡数组：', this.editableTabs)
             }
         }
     })

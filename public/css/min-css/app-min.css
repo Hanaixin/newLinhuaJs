@@ -20,3 +20,7 @@ body,html{margin:0;padding:0;width:100%;height:100%;overflow:auto;position:relat
 .font_color{color:#20a0ff}
 .font_fff{color:#fff}
 .font_purple{color:#7c7080}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track-piece{background-color:#ecf0f5;-webkit-border-radius:6px}
+::-webkit-scrollbar-thumb:vertical{height:5px;background-color:#c2c2c2;-webkit-border-radius:6px}
+::-webkit-scrollbar-thumb:horizontal{width:5px;background-color:#ecf0f5;-webkit-border-radius:6px}
