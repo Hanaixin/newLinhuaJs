@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="public/html/head.html" rel="import"/>
+    <link rel="icon" href="public/img/linhua_logo.png"/>
+    <link rel="stylesheet" href="public/lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="public/css/min-css/login.min.css" />
+</head>
+<body>
+<div class="bg" id="app">
+    <div class="login_box bg_fff">
+        <div class="logo-text flex flex_a_c flex_j_c">
+            <img src="public/img/linhua.png" />
+            <span>金旺临化数据云平台</span>
+        </div>
+        <div class="flex flex_j_a flex_a_c change-box">
+            <div @click="changeTab" class="change-tab flex flex_a_c flex_j_c line-tab" :class="{'font_color': isActive,'is-active': isActive}">扫码登录</div>
+            <div @click="changeTab" class="change-tab flex flex_a_c flex_j_c line-tab" :class="{'font_color': !isActive,'is-active': !isActive}">账号登录</div>
+        </div>
+        <div class="flex flex_j_c flex_a_c change-content" v-show="isActive">
+            <img src="public/img/timg.jpg" />
+        </div>
+        <div class="flex flex_j_c flex_a_c change-content" v-show="!isActive">
+            <form class="flex flex_j_c flex_d_c" action="javascript:;" method="post">
+                <input value="" name="username" type="text" placeholder="请输入用户名" />
+                <input value="" name="username" type="password" placeholder="请输入密码" />
+                <div class="flex flex_j_b flex_a_c" style="margin-bottom: 1.2rem;">
+                    <input value="" type="text" placeholder="验证码" style="margin-bottom: 0; flex: 1;width: 50%;" >
+                    <!--<img style="flex: 1;width: 50%;" src="https://www.tiaowulan.com/loginimg!validateCode.do?timestamp=1577264142753">-->
+                    <img style="flex: 1;width: 50%;height:38px" src="blob:http://test-pass-admin.mustint.com/f4e9604b-5b93-4627-949c-4be117d7f031">
+                </div>
+                <button class="bg_color font_fff" type="submit" @click="submit()">登录</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            isActive: true,
+            form: {
+                name: '',
+                region: '',
+                date1: '',
+                date2: '',
+                delivery: false,
+                type: [],
+                resource: '',
+                desc: ''
+            }
+        },
+        methods: {
+            submit: function () {
+                localStorage.setItem('token',new Date().getTime());
+                location.href = 'http://localhost:63343/newLinhuaJs/index.html';
+            },
+            changeTab: function () {
+                this.isActive = !this.isActive;
+            }
+        }
+    })
+</script>
+</body>
+</html>

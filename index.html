@@ -13,8 +13,8 @@
     <!-- top -->
     <div class="top flex flex_a_c flex_j_b bg_fff">
         <div class="flex flex_a_c font_color" style="padding: 0 1rem;" @click="_sn">
-            <span class="icon iconfont" style="font-size: 24px;margin-right: .5rem;">&#xe74a;</span>
-            <h3>临化OA</h3>
+            <!--<span class="icon iconfont" style="font-size: 24px;margin-right: .5rem;">&#xe74a;</span>-->
+            <h3>金旺临化数据云平台</h3>
         </div>
         <div>
             <div class="head-normal bg_fff flex flex_a_c">
@@ -180,6 +180,11 @@
             //个人设置
             settingOpen: false,
             src: 'index'
+        },
+        created(){
+            if(!localStorage.getItem('token')){
+                location.href = './login.html';
+            }
         },
         methods: {
 //            手动显示左侧导航栏

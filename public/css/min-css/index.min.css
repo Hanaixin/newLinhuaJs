@@ -31,22 +31,22 @@ from{padding-left:0}
 to{padding-left:200px}
 }
 @media screen and (min-width:1200px){
-.left{animation:toRight .1s;animation-fill-mode:forwards}
-.content{animation:pdRight .1s;animation-fill-mode:forwards}
+.left{animation:toRight .2s;animation-fill-mode:forwards}
+.content{animation:pdRight .2s;animation-fill-mode:forwards}
 }
 @media screen and (min-width:992px) and (max-width:1199px){
-.left{animation:toRight .1s;animation-fill-mode:forwards}
-.content{animation:pdRight .1s;animation-fill-mode:forwards}
+.left{animation:toRight .2s;animation-fill-mode:forwards}
+.content{animation:pdRight .2s;animation-fill-mode:forwards}
 }
 @media screen and (min-width:768px) and (max-width:991px){
-.left{animation:toLeft .1s;animation-fill-mode:forwards}
-.content{animation:pdLeft .1s;animation-fill-mode:forwards}
+.left{animation:toLeft .2s;animation-fill-mode:forwards}
+.content{animation:pdLeft .2s;animation-fill-mode:forwards}
 }
 @media screen and (max-width:767px) and (min-width:480px){
-.left{animation:toLeft .1s;animation-fill-mode:forwards}
-.content{animation:pdLeft .1s;animation-fill-mode:forwards}
+.left{animation:toLeft .2s;animation-fill-mode:forwards}
+.content{animation:pdLeft .2s;animation-fill-mode:forwards}
 }
 @media screen and (max-width:480px){
-.left{animation:toLeft .1s;animation-fill-mode:forwards}
-.content{animation:pdLeft .1s;animation-fill-mode:forwards}
+.left{animation:toLeft .2s;animation-fill-mode:forwards}
+.content{animation:pdLeft .2s;animation-fill-mode:forwards}
 }

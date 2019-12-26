@@ -163,12 +163,12 @@ iframe {
 /*大型屏幕pc 超大屏*/
 @media screen and (min-width: 1200px) {
     .left {
-        animation: toRight 0.1s;
+        animation: toRight 0.2s;
         animation-fill-mode: forwards;
     }
 
     .content {
-        animation: pdRight 0.1s;
+        animation: pdRight 0.2s;
         animation-fill-mode: forwards;
     }
 }
@@ -176,12 +176,12 @@ iframe {
 /*1200>=pc>=992 大屏，字体红色，背景黑色*/
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .left {
-        animation: toRight 0.1s;
+        animation: toRight 0.2s;
         animation-fill-mode: forwards;
     }
 
     .content {
-        animation: pdRight 0.1s;
+        animation: pdRight 0.2s;
         animation-fill-mode: forwards;
     }
 }
@@ -189,12 +189,12 @@ iframe {
 /*768<=pad<992 中屏，字体黄色，背景红色*/
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .left {
-        animation: toLeft 0.1s;
+        animation: toLeft 0.2s;
         animation-fill-mode: forwards;
     }
 
     .content {
-        animation: pdLeft 0.1s;
+        animation: pdLeft 0.2s;
         animation-fill-mode: forwards;
     }
 }
@@ -202,12 +202,12 @@ iframe {
 /*phone<768  小屏，字体黑色，背景蓝色*/
 @media screen and (max-width: 767px) and (min-width: 480px) {
     .left {
-        animation: toLeft 0.1s;
+        animation: toLeft 0.2s;
         animation-fill-mode: forwards;
     }
 
     .content {
-        animation: pdLeft 0.1s;
+        animation: pdLeft 0.2s;
         animation-fill-mode: forwards;
     }
 }
@@ -215,12 +215,12 @@ iframe {
 /* 超小屏，字体黑色，背景蓝色*/
 @media screen and (max-width: 480px) {
     .left {
-        animation: toLeft 0.1s;
+        animation: toLeft 0.2s;
         animation-fill-mode: forwards;
     }
 
     .content {
-        animation: pdLeft 0.1s;
+        animation: pdLeft 0.2s;
         animation-fill-mode: forwards;
     }
 }
