@@ -22,7 +22,7 @@
             <div class="head-normal flex flex_a_c">
                 <div class="flex flex_a_c" @click="_ot">
                     <span class="icon iconfont font-icon font_warning mg-r-5e c-p">&#xe760;</span>
-                    <img class="c-p" src="public/img/head-01.jpg">
+                    <img class="c-p mg-r-5e" src="public/img/head-01.jpg">
                     <span class="c-p name">username</span>
                 </div>
                 <div v-show="settingOpen" class="head-setting bg_fff">
@@ -117,7 +117,7 @@
         data: {
             nav: [
                 {
-                    title: "主菜单",
+                    title: "首页",
                     src: component
                 },
                 {
@@ -155,7 +155,7 @@
                     ]
                 }
             ],
-            navIndex: '主菜单',//默认选中的值
+            navIndex: '首页',//默认选中的值
 //            左侧导航栏
             sn: false,
             //个人设置
@@ -195,7 +195,7 @@
             if (!localStorage.getItem('token')) {
                 location.href = './login.html';
             }
-            this.addTab('主菜单');
+            this.addTab('首页');
             window: onresize = function () {
                 $('.el-tabs__content').height($('.el-tabs--card').height()-$('.el-tabs__nav-scroll').height());
             }

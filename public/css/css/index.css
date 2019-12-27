@@ -1,13 +1,13 @@
 .top {
     width: 100%;
     height: 59px;
-    /*border-bottom: 1px solid #eee;*/
+    border-bottom: 1px solid transparent;
     position: absolute;
     top: 0;
     padding-right: 1rem;
     box-sizing: border-box;
     z-index: 3;
-    background-image: linear-gradient(to right,#001529,#fbfdff);
+    background-image: linear-gradient(to right, #001529, #fbfdff);
 }
 
 .left {
@@ -64,6 +64,11 @@
     padding: .5rem 0;
 }
 
+.el-message-box {
+    max-width: 420px;
+    width: 50%;
+}
+
 /*content*/
 .content {
     position: absolute;
@@ -82,7 +87,9 @@
     background-color: #f1f2f7;
     /*position: relative;*/
 }
-
+.el-table{
+    width:99.9%!important;
+}
 .el-menu {
     background-color: transparent !important;
 }
@@ -95,36 +102,50 @@
     background-color: #145a8e !important;
     color: #fff;
 }
-.el-tabs__header{
+
+.el-tabs__header {
     background-color: #ffffff;
     margin: 0;
 }
-.el-tabs--card>.el-tabs__header .el-tabs__item.is-active{
+
+.el-tabs--card > .el-tabs__header .el-tabs__item.is-active {
     border-color: transparent;
     border-top: 1px solid #20a0ff;
     border-radius: 0;
     background-color: #f6f6f6;
 }
-.el-tab-pane,.el-tabs__content,.el-tabs--card{
+
+.el-tab-pane, .el-tabs__content, .el-tabs--card {
     width: 100%;
 }
-.el-tab-pane,.el-tabs--card{
+
+.el-tab-pane, .el-tabs--card {
     height: 100%;
 }
-.el-tabs__content{
+
+.el-tabs__content {
     height: 93%;
 }
-.el-form{
+
+.el-form {
     width: 460px;
 }
-.box{
-    margin-top: .5rem;
+
+.box {
+    margin: .5rem;
     padding: 1rem;
+    box-sizing: border-box;
 }
-.box:last-child{
-    margin-bottom:0;
+
+.box:last-child {
+    margin-bottom: 0;
 }
-.iframe-mask{
+.quarter-box{
+    width: 25%;
+    box-sizing: border-box;
+}
+
+.iframe-mask {
     position: absolute;
     top: 0;
     left: 0;
@@ -133,6 +154,7 @@
     background-color: transparent;
     z-index: -1;
 }
+
 iframe {
     width: 100%;
     height: 100%;
@@ -154,15 +176,17 @@ iframe {
     transition: none !important;
 }
 
-.el-checkbox-group .el-checkbox+.el-checkbox {
+.el-checkbox-group .el-checkbox + .el-checkbox {
     margin-left: 0;
 }
+
 .el-checkbox-group .el-checkbox {
     float: left;
     width: 160px;
     margin: 0;
     padding: 0;
 }
+
 /*定义动画*/
 @keyframes toLeft {
     from {
@@ -265,26 +289,36 @@ iframe {
         animation-fill-mode: forwards;
         padding-top: 101.4px;
     }
-    .top{
+
+    .top {
         padding-right: 0;
     }
-    .top>div{
+
+    .top > div {
         width: 100%
     }
-    .top>div:first-child{
+
+    .top > div:first-child {
         justify-content: center;
     }
-    .top>div:last-child .head-normal{
+
+    .top > div:last-child .head-normal {
         justify-content: flex-end;
         background-color: #fff;
         padding: .2rem .5rem;
         box-sizing: border-box;
     }
-    .top .name{
+
+    .top .name {
         display: none;
     }
-    .head-normal img{
+
+    .head-normal img {
         width: 36px;
         height: 36px;
+    }
+
+    .half {
+        width: 100% !important;
     }
 }

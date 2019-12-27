@@ -1,12 +1,14 @@
-.top{width:100%;height:59px;position:absolute;top:0;padding-right:1rem;box-sizing:border-box;z-index:3;background-image:linear-gradient(to right,#001529,#fbfdff)}
+.top{width:100%;height:59px;border-bottom:1px solid transparent;position:absolute;top:0;padding-right:1rem;box-sizing:border-box;z-index:3;background-image:linear-gradient(to right,#001529,#fbfdff)}
 .left{width:200px;height:100%;position:absolute;top:0;left:0;padding-top:59px;margin-top:-1px;margin-left:0;box-sizing:border-box;z-index:2}
 .head-normal{position:relative;cursor:pointer}
 .head-normal img{width:48px;height:48px;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%}
 .head-setting{font-size:.8rem;position:absolute;padding:0;box-shadow:0 2px 8px rgba(0,0,0,.176)!important;width:200px;right:0;top:150%;color:#666}
 .head-setting::after{content:'';width:0;height:0;display:block;position:absolute;top:-18px;left:50%;border:10px solid transparent;border-bottom:10px solid #fff}
 .head-setting>div{padding:.5rem 0}
+.el-message-box{max-width:420px;width:50%}
 .content{position:absolute;left:0;bottom:0;height:100%;width:100%;padding-left:200px;padding-top:59px;z-index:1;box-sizing:border-box;overflow:auto}
 .page{background-color:#f1f2f7}
+.el-table{width:99.9%!important}
 .el-menu{background-color:transparent!important}
 .el-menu-item,.el-submenu__title{color:#b8c7ce}
 .el-menu--horizontal.el-menu--dark .el-submenu .el-menu-item:hover,.el-menu--horizontal.el-menu--dark .el-submenu .el-submenu-title:hover,.el-menu-item.is-active,.el-menu-item:hover,.el-submenu .el-menu-item:hover,.el-submenu__title:hover{background-color:#145a8e!important;color:#fff}
@@ -16,8 +18,9 @@
 .el-tab-pane,.el-tabs--card{height:100%}
 .el-tabs__content{height:93%}
 .el-form{width:460px}
-.box{margin-top:.5rem;padding:1rem}
+.box{margin:.5rem;padding:1rem;box-sizing:border-box}
 .box:last-child{margin-bottom:0}
+.quarter-box{width:25%;box-sizing:border-box}
 .iframe-mask{position:absolute;top:0;left:0;width:100%;height:100%;background-color:transparent;z-index:-1}
 iframe{width:100%;height:100%;border:0}
 .show-anyway{animation:toRight .5s!important;animation-fill-mode:forwards!important}
@@ -65,4 +68,5 @@ to{padding-left:200px}
 .top>div:last-child .head-normal{justify-content:flex-end;background-color:#fff;padding:.2rem .5rem;box-sizing:border-box}
 .top .name{display:none}
 .head-normal img{width:36px;height:36px}
+.half{width:100%!important}
 }
