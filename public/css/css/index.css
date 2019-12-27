@@ -4,13 +4,14 @@
     /*border-bottom: 1px solid #eee;*/
     position: absolute;
     top: 0;
-    padding: 0 1rem;
+    padding-right: 1rem;
     box-sizing: border-box;
     z-index: 3;
+    background-image: linear-gradient(to right,#001529,#fbfdff);
 }
 
 .left {
-    border-right: 1px solid #eee;
+    /*border-right: 1px solid #eee;*/
     width: 200px;
     height: 100%;
     position: absolute;
@@ -91,7 +92,7 @@
 }
 
 .el-menu--horizontal.el-menu--dark .el-submenu .el-menu-item:hover, .el-menu-item.is-active, .el-menu--horizontal.el-menu--dark .el-submenu .el-submenu-title:hover, .el-menu-item:hover, .el-submenu .el-menu-item:hover, .el-submenu__title:hover {
-    background-color: #20a0ff !important;
+    background-color: #145a8e !important;
     color: #fff;
 }
 .el-tabs__header{

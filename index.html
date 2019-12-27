@@ -12,16 +12,17 @@
 <body>
 <div id="app">
     <!-- top -->
-    <div class="top flex flex_a_c flex_j_b bg_fff">
-        <div class="flex flex_a_c font_color" style="padding: 0 1rem;" @click="_sn">
+    <div class="top flex flex_a_c flex_j_b bg_deep_blue">
+        <div class="flex flex_a_c" style="height: 100%;" @click="_sn">
             <!--<span class="icon iconfont" style="font-size: 24px;margin-right: .5rem;">&#xe74a;</span>-->
-            <h3>金旺临化数据云平台</h3>
+            <!--<h3>金旺临化数据云平台</h3>-->
+            <img src="public/img/font-logo/logo-font1.PNG" style="width: 200px;">
         </div>
         <div>
-            <div class="head-normal bg_fff flex flex_a_c">
+            <div class="head-normal flex flex_a_c">
                 <div class="flex flex_a_c c-p" @click="_ot">
                     <img src="public/img/head-01.jpg">
-                    <span>username</span>
+                    <span class="">username</span>
                 </div>
                 <div v-show="settingOpen" class="head-setting bg_fff">
                     <div class="flex flex_a_c flex_j_a">
@@ -44,8 +45,8 @@
         </div>
     </div>
     <!-- left -->
-    <div class="left font_fff bg_nav" :class="{'show-anyway':sn}">
-        <el-row class="tac nav bg_nav">
+    <div class="left font_fff bg_deep_blue" :class="{'show-anyway':sn}">
+        <el-row class="tac nav bg_deep_blue">
             <el-col :span="24">
                 <el-menu
                         :default-active="navIndex"
