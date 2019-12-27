@@ -20,9 +20,10 @@
         </div>
         <div>
             <div class="head-normal flex flex_a_c">
-                <div class="flex flex_a_c c-p" @click="_ot">
-                    <img src="public/img/head-01.jpg">
-                    <span class="">username</span>
+                <div class="flex flex_a_c" @click="_ot">
+                    <span class="icon iconfont font-icon font_warning mg-r-5e c-p">&#xe760;</span>
+                    <img class="c-p" src="public/img/head-01.jpg">
+                    <span class="c-p">username</span>
                 </div>
                 <div v-show="settingOpen" class="head-setting bg_fff">
                     <div class="flex flex_a_c flex_j_a">
@@ -105,6 +106,7 @@
                     :name="item.name">
                 <!--{{item.content}}-->
                 <iframe :src="item.content + '.html'"></iframe>
+                <div @click="_snn" class="iframe-mask" :style="{zIndex:((settingOpen||sn)?'1':'-1')}"></div>
             </el-tab-pane>
         </el-tabs>
     </div>
@@ -166,7 +168,7 @@
         },
         watch: {
             'editableTabsValue': function (val) {
-                console.log('选项卡变化editableTabsValue:', val);
+//                console.log('选项卡变化editableTabsValue:', val);
                 let tabs = this.editableTabs, title;
                 tabs.forEach((tab, index) => {
                     if (tab.name === val) {
@@ -175,7 +177,7 @@
                 });
                 $(document).find('.el-menu-item').each(function () {
                     $(this).removeClass('is-active');
-                    console.log(this.innerText, title, this.innerText == title);
+//                    console.log(this.innerText, title, this.innerText == title);
                     var text = this.innerText;
 //                    var re =  [\u4E00-\u9FA5\\s];
 //                    text = re.test(text);
@@ -195,9 +197,10 @@
             }
             this.addTab('主菜单');
             window: onresize = function () {
-                console.log('resize');
-                console.log($('.el-tabs--card').height());
-                console.log($('.el-tabs__nav-scroll').height());
+                $('.el-tabs__content').height($('.el-tabs--card').height()-$('.el-tabs__nav-scroll').height());
+            }
+            window: onload = function(){
+                console.log('onload');
                 $('.el-tabs__content').height($('.el-tabs--card').height()-$('.el-tabs__nav-scroll').height());
             }
         },
@@ -221,6 +224,7 @@
             },
 //            手动显示左侧导航栏
             _snn(){
+                console.log('snn');
                 this.sn = false;
                 this.settingOpen = false;
             },
@@ -247,7 +251,7 @@
                 } else {
                     //选中
                     this.editableTabsValue = th.tabIndex;
-                    console.log(tabs);
+//                    console.log(tabs);
                 }
             },
             addTab(targetName, el) {
@@ -275,7 +279,7 @@
                 }
                 this.editableTabsValue = activeName;
                 this.editableTabs = tabs.filter(tab => tab.name !== targetName);
-                console.log('删除过后的选项卡数组：', this.editableTabs)
+//                console.log('删除过后的选项卡数组：', this.editableTabs)
                 if(this.editableTabs.length<1){
                     this.addTab('主菜单');
                 }

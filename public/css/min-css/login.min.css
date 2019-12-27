@@ -6,9 +6,9 @@
 .change-box{height:36px;color:#757070}
 .change-tab{height:100%;border-bottom:2px solid transparent;padding:0 1rem}
 .is-active{border-bottom:2px solid #20a0ff}
-.login_box{position:absolute;padding:1rem;max-width:378px!important;box-sizing:border-box}
+.login_box{position:absolute;padding:1rem;height:470px;max-width:430px!important;box-sizing:border-box}
 .change-content{padding:1rem 0}
-.change-content img{width:100%}
+.change-content img{width:75%}
 input:-internal-autofill-selected{background-color:#fff!important}
 form{width:80%;padding-top:1rem}
 form input{height:36px;padding:0 .5rem;border:1px solid #ccc;margin-bottom:1.3rem;outline:0}
@@ -20,7 +20,7 @@ form button{border:none;height:45px;line-height:45px;margin-top:.5rem}
 .login_box{width:32%;top:50%;margin-top:-200px;left:10%}
 }
 @media screen and (min-width:768px){
-.login_box{width:25%;top:50%;left:10%;margin-top:-300px}
+.login_box{width:430px;top:50%;left:10%;margin-top:-300px}
 }
 @media screen and (min-width:480px){
 /*!*height:500px;*!*/

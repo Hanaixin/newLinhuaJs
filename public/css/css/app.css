@@ -123,6 +123,21 @@ body,html{
 .font_purple{
     color: #7c7080;
 }
+.font_warning{
+    color: #E6A23C;
+}
+.font_success{
+    color: #67C23A;
+}
+.font_danger{
+    color: #F56C6C;
+}
+.font_Info{
+    color: #909399;
+}
+.font-icon{
+    font-size: 1.8rem !important;
+}
 ::-webkit-scrollbar
 {
     width: 6px;
@@ -144,4 +159,8 @@ body,html{
     width: 5px;
     background-color: #ecf0f5;
     -webkit-border-radius: 6px;
+}
+
+.mg-r-5e{
+    margin-right: 0.5rem;
 }

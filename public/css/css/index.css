@@ -128,6 +128,7 @@
     width: 100%;
     height: 100%;
     background-color: transparent;
+    z-index: -1;
 }
 iframe {
     width: 100%;
@@ -150,6 +151,15 @@ iframe {
     transition: none !important;
 }
 
+.el-checkbox-group .el-checkbox+.el-checkbox {
+    margin-left: 0;
+}
+.el-checkbox-group .el-checkbox {
+    float: left;
+    width: 160px;
+    margin: 0;
+    padding: 0;
+}
 /*定义动画*/
 @keyframes toLeft {
     from {

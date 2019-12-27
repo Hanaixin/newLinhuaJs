@@ -43,7 +43,8 @@ body, html, .bg {
 .login_box {
     position: absolute;
     padding: 1rem;
-    max-width: 378px !important;
+    height: 470px;
+    max-width: 430px !important;
     box-sizing: border-box;
     /*min-width: 317px;*/
 }
@@ -53,7 +54,7 @@ body, html, .bg {
 }
 
 .change-content img {
-    width: 100%;
+    width: 75%;
 }
 
 input:-internal-autofill-selected{
@@ -102,7 +103,7 @@ form button {
 
 @media screen and (min-width: 768px) {
     .login_box {
-        width: 25%;
+        width: 430px;
         /*height:500px;*/
         top: 50%;
         left: 10%;

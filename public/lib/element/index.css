@@ -1457,7 +1457,8 @@
 
 .el-select {
 	display: inline-block;
-	position: relative
+	position: relative;
+	width: 100%;
 }
 
 .el-select:hover .el-input__inner {
@@ -3411,7 +3412,7 @@
 }
 
 .el-tabs__nav-wrap.is-scrollable {
-	padding: 0 15px
+	padding: 0 20px
 }
 
 .el-tabs__nav-scroll {
@@ -3423,8 +3424,11 @@
 	position: absolute;
 	cursor: pointer;
 	line-height: 44px;
-	font-size: 12px;
-	color: #8391a5
+	font-size: 16px;
+	color: #8391a5;
+	text-align: center;
+	background-color: #ecf0f5;
+	padding: 0 2px;
 }
 
 .el-tabs__nav-next {
