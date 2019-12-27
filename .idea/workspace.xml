@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5c6ad1d8-12f0-4d47-97e2-c6159442bacc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/css/app.css" afterPath="$PROJECT_DIR$/public/css/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/css/index.css" afterPath="$PROJECT_DIR$/public/css/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/min-css/app-min.css" afterPath="$PROJECT_DIR$/public/css/min-css/app-min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/min-css/index.min.css" afterPath="$PROJECT_DIR$/public/css/min-css/index.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/html/head.html" afterPath="$PROJECT_DIR$/public/html/head.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/pages/component/component.html" afterPath="$PROJECT_DIR$/public/pages/component/component.html" />
     </list>
     <ignored path="linhua-js.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -132,8 +125,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="112" column="1" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="1" />
+            <state relative-caret-position="126">
+              <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -561,7 +554,7 @@
       <workItem from="1577085448591" duration="7698000" />
       <workItem from="1577147980443" duration="77277000" />
       <workItem from="1577356588902" duration="132000" />
-      <workItem from="1577404992239" duration="6735000" />
+      <workItem from="1577404992239" duration="6938000" />
     </task>
     <task id="LOCAL-00001" summary="记录">
       <created>1577149069256</created>
@@ -668,11 +661,18 @@
       <option name="project" value="LOCAL" />
       <updated>1577356659121</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="UI更新">
+      <created>1577412934504</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1577412934504</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91842000" />
+    <option name="totallyTimeSpent" value="92045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -713,7 +713,8 @@
     <MESSAGE value="适配手机端" />
     <MESSAGE value="登录页面初步完成" />
     <MESSAGE value="左侧单向绑定了选项卡页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="左侧单向绑定了选项卡页面" />
+    <MESSAGE value="UI更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI更新" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1123,8 +1124,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="112" column="1" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="1" />
+        <state relative-caret-position="126">
+          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
           <folding />
         </state>
       </provider>
