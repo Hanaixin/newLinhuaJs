@@ -27,6 +27,14 @@
         .line {
             text-align: center;
         }
+        .el-form{
+            max-width: 460px;
+            width: 100%;
+        }
+        .el-radio-group .el-radio{
+            padding: 0.1rem 0.5rem 0.1rem 0;
+            margin-left:0 !important;
+        }
     </style>
 </head>
 <body>
@@ -47,7 +55,7 @@
         </div>
     </div>
     <div class="box bg_fff">
-        <el-form ref="form" stretch="true" :model="form" label-width="80px">
+        <el-form style="width: 100%;" ref="form" stretch="true" :model="form" label-width="80px">
             <el-form-item label="活动名称">
                 <el-input v-model="form.name"></el-input>
             </el-form-item>

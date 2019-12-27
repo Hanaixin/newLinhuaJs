@@ -16,7 +16,8 @@
 .el-tab-pane,.el-tabs--card{height:100%}
 .el-tabs__content{height:93%}
 .el-form{width:460px}
-.box{margin:.5rem;padding:1rem}
+.box{margin-top:.5rem;padding:1rem}
+.box:last-child{margin-bottom:0}
 .iframe-mask{position:absolute;top:0;left:0;width:100%;height:100%;background-color:transparent;z-index:-1}
 iframe{width:100%;height:100%;border:0}
 .show-anyway{animation:toRight .5s!important;animation-fill-mode:forwards!important}
@@ -56,6 +57,12 @@ to{padding-left:200px}
 .content{animation:pdLeft .2s;animation-fill-mode:forwards}
 }
 @media screen and (max-width:480px){
-.left{animation:toLeft .2s;animation-fill-mode:forwards}
-.content{animation:pdLeft .2s;animation-fill-mode:forwards}
+.left{animation:toLeft .2s;animation-fill-mode:forwards;padding-top:101.4px}
+.content{animation:pdLeft .2s;animation-fill-mode:forwards;padding-top:101.4px}
+.top{padding-right:0}
+.top>div{width:100%}
+.top>div:first-child{justify-content:center}
+.top>div:last-child .head-normal{justify-content:flex-end;background-color:#fff;padding:.2rem .5rem;box-sizing:border-box}
+.top .name{display:none}
+.head-normal img{width:36px;height:36px}
 }
